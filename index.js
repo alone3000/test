@@ -12,6 +12,10 @@ app.get('/',(req,res)=>{
     res.send('hello world')
 })
 
+app.get('/home',(req,res)=>{
+    res.render('home.html')
+})
+
 app.get('/alone3000',(req,res)=>{
     res.send('welcome sanjeev')
 })
