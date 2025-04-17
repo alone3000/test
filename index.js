@@ -23,10 +23,11 @@ app.use('/static', express.static('public'));
 
 // exam portal routes setup
 import examRoutes from './src/routers/examRoutes.js'
-app.use('/exam',examRoutes)
+app.use('exam/',examRoutes)
 
 
 app.get('/',(req,res)=>{
+
     res.send('hello world')
 })
 
