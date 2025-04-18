@@ -23,13 +23,15 @@ app.use('/static', express.static('public'));
 
 // exam portal routes setup
 import examRoutes from './src/routers/examRoutes.js'
-app.use('exam/',examRoutes)
+app.use('exam',examRoutes)
 
 
 app.get('/',(req,res)=>{
 
     res.send('hello world')
 })
+
+
 
 app.get('/result',(req,res)=>{
     res.sendFile(path.join(__dirname,'./src/views/records.html'))
@@ -43,6 +45,12 @@ app.get('/add',(req,res)=>{
 
 app.get('/alone3000',(req,res)=>{
     res.send('welcome sanjeev')
+})
+
+
+
+app.get('/projects',(req,res)=>{
+    res.sendFile(path.join(__dirname,'public/Mentor/index.html'))
 })
 
 app.listen(PORT,()=>{
